@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Asap', sans-serif;
+}
+
+:root {
+    --color-primary: #00AE9D;
+    --color-secondary: #003641;
+    --color-white: #ffffff;
+    --color-purple: #49479D;
+    --color-green-medium: #7DB61C;
+    --color-green-light: #C9D200;
+}
+
+.navbar navbar-expand-lg bg-body-tertiary {
+    background-color: var(--color-secondary);
+}
