@@ -13,6 +13,24 @@
     --color-green-light: #C9D200;
 }
 
-.navbar navbar-expand-lg bg-body-tertiary {
+.navbar {
     background-color: var(--color-secondary);
+}
+
+button.navbar-toggler {
+    color: var(--color-white);
+}
+
+/* .navbar-nav {
+    align-items: center;
+} */
+
+#navbarNav a{
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.img-campanha {
+    max-width: 100%;
+    height: auto;
 }
