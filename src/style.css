@@ -1,8 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Asap', sans-serif;
-}
+
 
 :root {
     --color-primary: #00AE9D;
@@ -13,24 +9,29 @@
     --color-green-light: #C9D200;
 }
 
+body {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: 'Asap', sans-serif;
+}
+
+.azul {
+    background-color: var(--color-secondary);
+}
+
+.col {
+    padding: 0;
+}
+
 .navbar {
     background-color: var(--color-secondary);
 }
 
-button.navbar-toggler {
+.nav-link {
     color: var(--color-white);
 }
 
-/* .navbar-nav {
-    align-items: center;
-} */
-
-#navbarNav a{
-    color: var(--color-white);
-    text-transform: uppercase;
-}
-
-.img-campanha {
-    max-width: 100%;
-    height: auto;
+.nav-link:hover {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-purple);
 }
