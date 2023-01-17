@@ -23,6 +23,10 @@ body {
     padding: 0;
 }
 
+.row {
+    margin: 0;
+}
+
 .navbar {
     background-color: var(--color-secondary);
 }
