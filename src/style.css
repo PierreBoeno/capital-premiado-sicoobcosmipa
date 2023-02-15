@@ -152,7 +152,7 @@ section {
     background-repeat: no-repeat;
 }
 
-a {
+a, .footer-text {
     color: var(--color-green-light);
     text-decoration: none;
     font-weight: bold;
