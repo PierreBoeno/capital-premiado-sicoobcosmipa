@@ -31,6 +31,13 @@
 
     <!-- CSS Local -->
     <link rel="stylesheet" href="./src/style.css" />
+
+    <!-- Icones SVG Sicoob -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://www.sicoob.com.br/diretorio/assets/sicoob_icon_svg-1.0.0.css"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -93,16 +100,32 @@
         <div class="row">
           <div class="col">
             <div class="title">
-              <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" />
+              <!-- <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" /> -->
+              <div class="sicoob-icon-color-18 icon icon-sicoob"></div>
               <h2>COMO PARTICIPAR</h2>
             </div>
             <div class="small text-md-center">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                minima ea sint sunt in et quod tempora fuga, eaque ratione
-                asperiores necessitatibus ducimus? Totam consequuntur
-                perspiciatis excepturi sit? Consequuntur, ducimus?
-              </p>
+              <div class="row gap-3">
+                <div class="col pessoas">
+                  <div
+                    class="sicoob-icon-color-65 icon icon-sicoob"
+                    id="icon-pf"
+                  ></div>
+                  <h4 class="text-center">Pessoa Física</h4>
+                  <p class="w-75 text-center">
+                    A cada <span>R$ 50,00</span> investidos =
+                    <span>1</span> número da sorte por mês.
+                  </p>
+                </div>
+                <div class="col pessoas">
+                  <div class="sicoob-icon-color-62 icon icon-sicoob"></div>
+                  <h4 class="text-center">Pessoa Jurídica</h4>
+                  <p class="w-75 text-center">
+                    A cada <span>R$ 100,00</span> investidos =
+                    <span>1</span> número da sorte por mês.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -110,21 +133,35 @@
     </section>
 
     <!-- Regulamento -->
-    <section class="azul" id="regulamento">
+    <section class="verde-escuro" id="regulamento">
       <div class="container py-5">
         <div class="row">
           <div class="col">
             <div class="title">
-              <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" />
+              <!-- <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" /> -->
+              <div class="sicoob-icon-color-17 icon icon-sicoob"></div>
               <h2>REGULAMENTO</h2>
             </div>
             <div class="text">
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et
-                modi ab minima architecto, omnis cum quam ad, quia laudantium
-                quisquam illum quae beatae velit quaerat ratione. Id vitae fugit
-                molestiae.
+                A Campanha intitulada “CAPITAL PREMIADO” será realizada pelo
+                Sicoob Cosmipa, sendo destinada exclusivamente aos cooperados.
+                Poderão participar desta Campanha as Pessoas Físicas, e as
+                Pessoas Jurídicas, associadas ao Sicoob Cosmipa que durante o
+                período de participação, 00h00 do dia 01/01/2023 até às 23h59 do
+                dia 30/12/2023, atenderem os seguintes critérios:
               </p>
+              <p>
+                <ol type="I">
+                  <li>Atender aos requisitos estatutários do Sicoob Cosmipa;</li>
+                  <li>Estiverem adimplentes em suas obrigações junto a Cooperativa;</li>
+                  <li>Cumprirem com as demais condições de participação
+                    descritas neste regulamento.</li>
+                </ol>
+              </p>
+            </div>
+            <div class="text-center">
+              <a href="./src/regulamento/REGULAMENTO CAMPANHA CAPITAL - EDITADO.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-click px-4 mt-4">SABER MAIS</a>
             </div>
           </div>
         </div>
@@ -159,12 +196,13 @@
     </div>
 
     <!-- Ganhadores -->
-    <section class="azul" id="ganhadores">
+    <section class="verde-escuro" id="ganhadores">
       <div class="container py-5">
         <div class="row">
           <div class="col">
             <div class="title">
-              <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" />
+              <!-- <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" /> -->
+              <div class="sicoob-icon-color-21 icon icon-sicoob"></div>
               <h2>GANHADORES</h2>
             </div>
             <div class="heading text-center">
@@ -201,7 +239,8 @@
     <section id="faq">
       <div class="container py-5">
         <div class="title">
-          <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" />
+          <!-- <img src="./src/imgs/estrela.svg" class="star" alt="Estrela" /> -->
+          <div class="sicoob-icon-color-28 icon icon-sicoob"></div>
           <h2>PERGUNTAS FREQUENTES</h2>
         </div>
         <div class="row py-4">
@@ -304,6 +343,25 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Sicoob -->
+    <section id="footer" class="verde-escuro py-4">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md align-self-center">
+            <h2>PROCURE UMA DE NOSSAS AGÊNCIAS</h2>
+            <p>Central de Atendimento</p>
+            <p>Telefone: (31) 3617-9099</p>
+            <p>Consulte os endereços de nossas agências <a href="https://www.sicoob.com.br/web/sicoobcosmipa/nossas-agencias" target="_blank">aqui</a>.</p>
+            <p>Atendimento: Segunda a Sexta de 11:00 as 16:00.</p>
+          </div>
+          <div class="col-md d-flex flex-column justify-content-between text-center align-items-center mt-3">
+            <p>Venha ser nosso coperado.</p>
+            <img src="./src/imgs/logo sicoob cosmipa white.png" alt="Logo Sicoob Cosmipa" width="300px">
           </div>
         </div>
       </div>

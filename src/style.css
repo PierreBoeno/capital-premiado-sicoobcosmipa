@@ -15,7 +15,7 @@ body {
     font-family: 'Asap', sans-serif;
 }
 
-.azul {
+.verde-escuro {
     background-color: var(--color-secondary);
 }
 
@@ -28,9 +28,42 @@ body {
     max-width: 100%;
 }
 
+.col .pessoas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col .icon-sicoob {
+    height: 65px;
+    margin-right: -34px;
+    margin-bottom: 10px;
+}
+
+#icon-pf {
+    margin-right: -50px;
+}
+
+.pessoas h4 {
+    color: var(--color-purple);
+    font-weight: bold;
+    font-size: 1.7rem;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.pessoas p {
+    font-size: 1.5rem;
+}
+
 .row {
     display: flex;
     margin: 0;
+}
+
+span {
+    color: var(--color-purple);
+    font-weight: bold;
 }
 
 .container {
@@ -52,12 +85,26 @@ body {
 
 .title {
     margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .title .star {
     height: 55px;
     margin-top: -33px;
     margin-right: 10px;
+}
+
+.title .icon-sicoob {
+    height: 45px;
+    margin-top: -33px;
+    margin-right: -38px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 700;
 }
 
 .title h2 {
@@ -103,4 +150,10 @@ section {
     background-image: url(./imgs/confetes.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+a {
+    color: var(--color-green-light);
+    text-decoration: none;
+    font-weight: bold;
 }
