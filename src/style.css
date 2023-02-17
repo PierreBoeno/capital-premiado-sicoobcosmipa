@@ -1,158 +1,167 @@
-
 :root {
-    --color-primary: #00AE9D;
-    --color-secondary: #003641;
-    --color-white: #ffffff;
-    --color-purple: #49479D;
-    --color-green-medium: #7DB61C;
-    --color-green-light: #C9D200;
+  --color-primary: #00ae9d;
+  --color-secondary: #003641;
+  --color-white: #ffffff;
+  --color-purple: #49479d;
+  --color-green-medium: #7db61c;
+  --color-green-light: #c9d200;
 }
 
 body {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-family: 'Asap', sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: "Asap", sans-serif;
 }
 
 .verde-escuro {
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .div {
-    display: block;
+  display: block;
 }
 
 .col {
-    padding: 0;
-    max-width: 100%;
+  padding: 0;
+  max-width: 100%;
 }
 
 .col .pessoas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .col .icon-sicoob {
-    height: 65px;
-    margin-right: -34px;
-    margin-bottom: 10px;
+  height: 65px;
+  margin-right: -34px;
+  margin-bottom: 10px;
 }
 
 #icon-pf {
-    margin-right: -50px;
+  margin-right: -50px;
 }
 
 .pessoas h4 {
-    color: var(--color-purple);
-    font-weight: bold;
-    font-size: 1.7rem;
-    width: 100px;
-    margin-bottom: 20px;
+  color: var(--color-purple);
+  font-weight: bold;
+  font-size: 1.7rem;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 .pessoas p {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .row {
-    display: flex;
-    margin: 0;
+  display: flex;
+  margin: 0;
 }
 
 span {
-    color: var(--color-purple);
-    font-weight: bold;
+  color: var(--color-purple);
+  font-weight: bold;
 }
 
 .container {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .navbar {
-    background-color: var(--color-secondary);
+  background-color: var(--color-secondary);
 }
 
 .nav-link {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 .nav-link:hover {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-purple);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-purple);
 }
 
 .title {
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title .star {
-    height: 55px;
-    margin-top: -33px;
-    margin-right: 10px;
+  height: 55px;
+  margin-top: -33px;
+  margin-right: 10px;
 }
 
 .title .icon-sicoob {
-    height: 45px;
-    margin-top: -33px;
-    margin-right: -38px;
-    margin-bottom: 10px;
+  height: 45px;
+  margin-top: -33px;
+  margin-right: -38px;
+  margin-bottom: 10px;
 }
 
 h2 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .title h2 {
-    display: inline;
-    font-weight: 700;
+  display: inline;
+  font-weight: 700;
 }
 
 section {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 #inicio {
-    padding: 0;
+  padding: 0;
 }
 
 .box {
-    background-color: var(--color-green-light);
-    border-radius: 1rem;
-    padding: 2rem;
+  background-color: var(--color-green-light);
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 .box h2 {
-    color: var(--color-secondary);
-    font-weight: 700;
+  color: var(--color-secondary);
+  font-weight: 700;
 }
 
 .container .box input {
-    border: 1px solid var(--color-secondary);
-    border-radius: 0.5rem;
-    text-align: center;
-    color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: var(--color-secondary);
 }
 
 .container .btn-primary {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-secondary);
-    color: var(--color-secondary);
-    font-weight: 700;
-    margin-bottom: 1rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 #ganhadores {
-    background-image: url(./imgs/confetes.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(./imgs/confetes.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-a, .footer-text {
-    color: var(--color-green-light);
-    text-decoration: none;
-    font-weight: bold;
+a,
+.footer-text {
+  color: var(--color-green-light);
+  text-decoration: none;
+  font-weight: bold;
 }
+
+#back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    background-color: var(--color-purple);
+    border-radius: 11px;
+  }
