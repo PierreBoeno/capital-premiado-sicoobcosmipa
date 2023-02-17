@@ -158,10 +158,14 @@ a,
 }
 
 #back-to-top {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--color-purple);
+  border: 2px solid var(--color-white);
+  border-radius: 11px;
+}
 
-    background-color: var(--color-purple);
-    border-radius: 11px;
-  }
+#back-to-top svg {
+  width: 1rem;
+}
