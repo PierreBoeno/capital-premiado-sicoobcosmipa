@@ -169,3 +169,33 @@ a,
 #back-to-top svg {
   width: 1rem;
 }
+
+#search {
+  display: none;
+}
+
+#sorteados {
+  display: none;
+}
+
+#text_mes {
+  width: 50%;
+  padding: 5px 0 10px 0;
+  text-align: center;
+  font-weight: bold;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #013641;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.erro {
+  display: none;
+  color: red;
+}
+
+.lgpd{
+  align-items: baseline;
+}
