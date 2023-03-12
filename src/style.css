@@ -199,3 +199,7 @@ a,
 .lgpd{
   align-items: baseline;
 }
+
+.lgpd input {
+  transform: scale(1.3);
+}
