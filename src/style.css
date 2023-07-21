@@ -178,6 +178,10 @@ a,
   display: none;
 }
 
+#sorteio-01, #sorteio-02 {
+  display: none;
+}
+
 #text_mes {
   width: 50%;
   padding: 5px 0 10px 0;
@@ -196,10 +200,30 @@ a,
   color: red;
 }
 
+.checkboxLGPD {
+  display: none;
+  color: red;
+}
+
 .lgpd{
   align-items: baseline;
 }
 
 .lgpd input {
   transform: scale(1.3);
+}
+
+.alert-forms {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+
+#btnForms {
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#btnForms a {
+  color: var(--color-secondary);
 }

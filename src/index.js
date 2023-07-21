@@ -1,60 +1,142 @@
-var btn = document.querySelector("#back-to-top");
+let btn = document.querySelector("#back-to-top");
 
-btn.addEventListener("click", function() {
+btn.addEventListener("click", function () {
     window.scrollTo(0, 0);
 });
 
-var btnConsultar = document.querySelector('#bntConsultar');
-var cupons = document.querySelector('#search');
-var sorteados = document.querySelector('#sorteados');
-var msgErro = document.querySelector('.erro');
+let btnConsultar = document.querySelector('#bntConsultar');
+let cupons = document.querySelector('#search');
+let sorteados = document.querySelector('#sorteados');
+let msgErro = document.querySelector('.erro');
+let checkbox = document.getElementById('checkLGPD');
+let erroCheckbox = document.querySelector('.checkboxLGPD');
 
-
+let classCooperado = document.querySelector('.cooperado');
+let classQtdCupons = document.querySelector('.qtd-cupons');
+let classCupons = document.querySelector('.cupons');
 
 // btnConsultar.addEventListener('click', function() {
 //     container.style.display = 'block';
 // })
 
-const inputCpfCnpj = document.querySelector('input');
+// const inputCpfCnpj = document.querySelector('input');
 
-inputCpfCnpj.addEventListener('keypress', () => {
-    let inputlenght = inputCpfCnpj.value.length;
+// inputCpfCnpj.addEventListener('keypress', () => {
+//     let inputlenght = inputCpfCnpj.value.length;
 
-    if (inputlenght ===  3 || inputlenght === 7) {
-        inputCpfCnpj.value += '.'
-    } else if (inputlenght === 11) {
-        inputCpfCnpj.value += '-'
-    } else if (inputlenght > 13) {
-        console.log("CNPJ");
-    }
-})
+//     if (inputlenght ===  3 || inputlenght === 7) {
+//         inputCpfCnpj.value += '.'
+//     } else if (inputlenght === 11) {
+//         inputCpfCnpj.value += '-'
+//     } else if (inputlenght > 13) {
+//         console.log("CNPJ");
+//     }
+// })
 
+let cooperado;
+let qtd_cupons;
+let cupom_inicial;
+let cupom_final;
+let view = 0;
 
 function consultar() {
 
-    var input = document.getElementById("cpf-cnpj");
+    if (checkbox.checked) {
+        console.log('marcado');
 
-
-    var cpfCnpj = input.value;
-
-    // alert("CPF: " + cpfCnpj);
-    if(cupons.style.display === 'block'){
-        cupons.style.display = 'none';
-    } else {
-        cupons.style.display = 'block';
-    }
-
-    if(msgErro.style.display === 'block'){
         msgErro.style.display = 'none';
+        erroCheckbox.style.display = 'none'
+
+        const input = document.querySelector("#cpf-cnpj").value;
+        console.log(input);
+        console.log(typeof input)
+
+        fetch("dados.json").then((response) => {
+            response.json().then((dados) => {
+
+                const infos = dados.cooperados.filter(n => n.CNPJ_CPF === input);
+
+
+                if (infos[0] !== undefined) {
+                    console.log(infos[0]);
+                    console.log(infos[0].EMPRESA_NOME);
+                    console.log(infos[0].Qtd);
+                    console.log(infos[0].INICIAL);
+                    console.log(infos[0].FINAL);
+
+                    cooperado = infos[0].EMPRESA_NOME;
+                    qtd_cupons = infos[0].Qtd;
+                    cupom_inicial = infos[0].INICIAL;
+                    cupom_final = infos[0].FINAL;
+
+                    // cupons.innerHTML = qtd_cupons;
+                    // cupons.innerHTML = cooperado;
+
+                    cupons.style.display = 'block';
+
+
+                    // if (view == 0) {
+                    //     cupom.style.display = 'block';
+                    // }
+                    // view = 1;
+
+                    // nomeC.innerHTML = nome;
+                    // numerodasorteC.innerHTML = numerodasorte;
+
+                    mostrarTela();
+                } else {
+                    // alert('Sem cupons!');
+                    // window.location.reload();
+                    msgErro.style.display = 'block';
+                    cupons.style.display = 'none';
+                }
+
+            })
+        })
+
     } else {
-        msgErro.style.display = 'block'
+        console.log('desmarcado');
+        erroCheckbox.style.display = 'block';
+        cupons.style.display = 'none';
+        msgErro.style.display = 'none';
     }
+
+    // if (cupons.style.display === 'block') {
+    //     cupons.style.display = 'none';
+    // } else {
+    //     cupons.style.display = 'block';
+    // }
+
+    // if (msgErro.style.display === 'block') {
+    //     msgErro.style.display = 'none';
+    // } else {
+    //     msgErro.style.display = 'block'
+    // }
+}
+
+function mostrarTela() {
+    console.log("Cooperado: " + cooperado);
+    console.log("Quantidade de Cupons: " + qtd_cupons);
+
+    if (qtd_cupons === 1) {
+        console.log("SC" + cupom_inicial);
+        classCooperado.innerHTML = cooperado;
+        classQtdCupons.innerHTML = qtd_cupons;
+        classCupons.innerHTML = "SC" + cupom_inicial;
+    } else {
+        console.log("SC" + cupom_inicial + " até SC" + cupom_final);
+        classCooperado.innerHTML = cooperado;
+        classQtdCupons.innerHTML = qtd_cupons;
+        classCupons.innerHTML = "SC" + cupom_inicial + " até SC" + cupom_final;
+    }
+
 }
 
 function consulta_ganhadores() {
-    if(sorteados.style.display === 'block'){
-        sorteados.style.display = 'none';
-    } else {
-        sorteados.style.display = 'block';
-    }
+    // if (sorteados.style.display === 'block') {
+    //     sorteados.style.display = 'none';
+    // } else {
+    //     sorteados.style.display = 'block';
+    // }
+
 }

@@ -143,19 +143,23 @@
         <div class="col-10 text-center mx-auto">
           <div class="box shadow">
             <h2>CONSULTE SEUS NÚMEROS DA SORTE</h2>
-            <div class="checkTipoPessoa m-2">
+            <p class="alert-forms">Para ser elegível na campanha é necessário além de integralizar o Capital, preencher e concordar com os termos LGPD no formulário abaixo.</p>
+            <button id="btnForms" class="btn btn-primary btn-click px4 mt-4"><a target="blank" href="https://forms.gle/xyGuoWPKuEg5Ztej6">FORMULÁRIO</a></button>
+            
+            <!-- <div class="checkTipoPessoa m-2">
               <input type="radio" name="TipoPessoa" id="checkCpf" value="PF" checked>
               <label for="checkCpf" class="pe-3">PF</label>
               <input type="radio" name="TipoPessoa" id="checkCnpj" value="PJ">
               <label for="checkCnpj">PJ</label>
-            </div>
+            </div> -->
             <p class="erro">Sem números da sorte.</p>
+            <p class="checkboxLGPD">Para consultar seus números da sorte, você deverá preencher o formulário acima aceitando os termos LGPD.</p>
             <input type="text" class="w-50 px-3 py-1 cpfOuCnpj" placeholder="CPF/CNPJ" id="cpf-cnpj"
               maxlength="18" minlength="11" name="cpf-cnpj" />
             <div class="lgpd d-flex mt-3">
               <input type="checkbox" name="termosLGPD" id="checkLGPD" class="me-2">
               <label for="checkLGPD">
-                Termos LGPD: Eu concordo em usar meus dados fornecidos para participar do Sorteio Capital Premiado realizado pelo Sicoob Cosmipa. Para saber mais consulte o regulamento completo.
+                Termos LGPD: Confirmo que preenchi o formulário acima para participação do sorteio, concordando em usar meus dados fornecidos para participar do Sorteio Capital Premiado realizado pelo Sicoob Cosmipa. Para saber mais consulte o regulamento completo.
               </label>
             </div>
           </div>
@@ -164,14 +168,17 @@
         </div>
       </div>
     </div>
-    <div id="search" class="container mb-5">
+    <div id="search" class="container mb-5 text-center">
       <div class="row">
         <div class="col">
           <div class="row text-center">
-              <!-- <h4><span>Cooperado:</span> Sicoob Cosmipa</h4>
-              <h4><span>Cupons:</span> 2</h4>
-              <h4><span>Números da Sorte:</span> SC02022, SC02023</h4> -->
-              <h4>Números da sorte ainda não disponíveis.</h4>
+              <h4><span>Cooperado:</span></h4>
+              <h4 class="cooperado"></h4>
+              <h4><span>Cupon(s):</span></h4>
+              <h4 class="qtd-cupons"></h4>
+              <h4><span>Número(s) da Sorte:</span></h4>
+              <h4 class="cupons"></h4>
+              <!-- <h4>Números da sorte ainda não disponíveis.</h4> -->
             <div class="no-list-result"></div>
           </div>
         </div>
@@ -193,13 +200,20 @@
             <p class="erro-ganhador"></p>
             <select name="text_mes" id="text_mes" class="mes-ganhadores" onchange="consulta_ganhadores()">
               <option value="0">SELECIONE O SORTEIO</option>
-              <option value="01">1º Sorteio - Abril- Sicoob Cosmipa</option>
-              <!-- <option value="02">2º Sorteio - Maio - Sicoob Cosmipa</option> -->
+              <option value="01">1º Sorteio - 14/04/2023 - Sicoob Cosmipa</option>
+              <option value="02">2º Sorteio - 14/07/2023 - Sicoob Cosmipa</option>
             </select>
             <div id="sorteados" class="mt-5">
-              <p>
-                Sorteio ainda não realizado.
-              </p>
+              <div id="sorteio-01">
+                <P>CUPOM: SCCP12229 | COOPERADO(A): JACQUELLINE LOPES FRIGINI</P>
+                <P>CUPOM: SCCP5957 | COOPERADO(A): CECILIA SOARES MARTINS DA SILVA</P>
+                <P>CUPOM: SCCP23643 | COOPERADO(A): SYLVIHELE ASSIS SILVA</P>
+              </div>
+              <div id="sorteio-02">
+                <P>CUPOM: SC13617 | COOPERADO(A): WALDIRENE APARECIDA TEIXEIRA ANASTACIO</P>
+                <P>CUPOM: SC22725 | COOPERADO(A): ESMERALDO ALVES GONCALVES</P>
+                <P>CUPOM: SC10236 | COOPERADO(A): SUZIANE GONCALVES ARAUJO LIMA</P>
+              </div>
             </div>
           </div>
         </div>
