@@ -7,6 +7,8 @@ btn.addEventListener("click", function () {
 let btnConsultar = document.querySelector('#bntConsultar');
 let cupons = document.querySelector('#search');
 let sorteados = document.querySelector('#sorteados');
+let sorteio01 = document.querySelector('#sorteio-01');
+let sorteio02 = document.querySelector('#sorteio-02');
 let monthSelect = document.getElementById('text_mes');
 let msgErro = document.querySelector('.erro');
 let checkbox = document.getElementById('checkLGPD');
@@ -139,14 +141,17 @@ function consulta_ganhadores() {
     // } else {
     //     sorteados.style.display = 'block';
     // }
-    console.log(monthSelect.value)
     if (monthSelect.value === '0') {
-        console.log('selecione o sorteio')
+        sorteados.style.display = 'none'
     }
     if (monthSelect.value === '01'){
-        console.log('sorteio 01')
+        sorteados.style.display = 'block'
+        sorteio01.style.display = 'block'
+        sorteio02.style.display = 'none'
     }
     if (monthSelect.value === '02') {
-        console.log('sorteio 02')
+        sorteados.style.display = 'block'
+        sorteio01.style.display = 'none'
+        sorteio02.style.display = 'block'
     }
 }
