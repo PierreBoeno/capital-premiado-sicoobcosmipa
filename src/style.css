@@ -86,6 +86,7 @@ span {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-transform: uppercase;
 }
 
 .title .star {
